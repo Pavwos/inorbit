@@ -53,7 +53,7 @@ docker-compose up -d
 
 5. Run migrations
 ```bash
-npx drizzle-kit push:pg
+npx drizzle-kit migrate
 ```
 
 6. Seed the database (optional)

@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Drizzle migrations
+migrations/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Docker (se estiver usando volumes locais ou pid files)
+*.pid
+docker-volume/

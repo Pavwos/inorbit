@@ -5,7 +5,7 @@ FROM node:20-slim
 WORKDIR /app
 
 # Copia apenas os arquivos necessários para instalar as dependências primeiro (cache do Docker)
-COPY package*.json ./
+COPY server/package*.json ./
 
 # Instala as dependências
 RUN npm install

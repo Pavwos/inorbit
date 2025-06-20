@@ -1,5 +1,5 @@
 # Use uma imagem oficial do Node.js com suporte a ES e ferramentas modernas
-FROM node:18-slim
+FROM node:20-slim
 
 # Cria e define o diretório de trabalho
 WORKDIR /app

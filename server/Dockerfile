@@ -1,20 +1,18 @@
-# Use uma imagem oficial do Node.js com suporte a ES e ferramentas modernas
 FROM node:20-slim
 
-# Cria e define o diretório de trabalho
 WORKDIR /app
 
-# Copia apenas os arquivos necessários para instalar as dependências primeiro (cache do Docker)
-COPY ./server/package.json ./
+# Copia os arquivos de dependência
+COPY ./server/package*.json ./
 
 # Instala as dependências
 RUN npm install
 
-# Copia o restante do código para dentro do container
-COPY . .
+# Copia o restante do código da pasta 'server'
+COPY ./server ./
 
-# Expõe a porta padrão (confirme se é 3000 ou outra)
+# Expõe a porta esperada (ajuste se necessário)
 EXPOSE 3000
 
-# Comando para rodar o backend em produção
+# Comando para rodar em modo dev
 CMD ["npm", "run", "dev"]

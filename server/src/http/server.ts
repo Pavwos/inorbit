@@ -23,10 +23,12 @@ app.register(createGoalRoute)
 app.register(createCompletionRoute)
 app.register(getPedingGoalsRoute)
 app.register(getWeekSummaryRoute)
+const PORT = Number(process.env.PORT) || 3333
+
 app
   .listen({
-    port: 3333,
+    port: PORT,
   })
   .then(() => {
-    console.log('HTTP Server Running...') //That's much too vulgar a display of power, Karras
+    console.log(`HTTP Server Running on port ${PORT}`)
   })

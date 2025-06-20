@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para rodar o backend em produção
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]
